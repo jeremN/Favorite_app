@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Fav app</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!--Boostrap-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--jQuery CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet"> 
+	<!--Style-->
+	<link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<h1 class="col-lg-3">Favorite App</h1>
+			<!--Search fav-->
+			<form id="search" class="col-lg-7">
+				<fieldset class="form-group col-md-10">
+					<input id="research" type="search" class="form-control col-md-3" placeholder="Search">
+				</fieldset>
+				<input class="btn btn-primary" type="submit" value="search">
+			</form>
+
+			<!--Reveal add fav form-->
+			<button id="add" class="col-lg-2">
+				<span class="glyphicon glyphicon-plus"></span>
+			</button>
+
+			<!--Add fav-->
+			<form id="add-fav" class="col-lg-2">
+				<fieldset class="form-group col-lg-10 col-lg-offset-1">
+					<label for="adress">Url</label>
+					<input id="adress" class="form-control" name="fav-url" type="text">
+				</fieldset>
+				<fieldset class="form-group col-lg-10 col-lg-offset-1">
+					<label for="category">Category</label>
+					<input id="category" class="form-control" name="fav-cat" type="text">
+				</fieldset>
+				<fieldset class="form-group col-lg-10 col-lg-offset-1">
+					<label for="keywords">Keywords</label>
+					<input id="keywords" class="form-control" name="fav-keyword" type="text">
+				</fieldset>
+				<input class="col-lg-3" type="submit" value="Send">
+			</form>
+		</div>
+	</header>
+
+	<div id="main">
+		<div id="card-menu" class="container">
+			<ul class="row">
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Photography</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>3D</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Suite Adobe</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Fonts</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Html, Css</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>General</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Motion Design</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Javascript</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Portfolio</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Inspiration</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Deviant Art</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Artstation</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Icons</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Color schemes</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Tutorials</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="card">
+					<a href="" title="">
+						<div>
+							<h2>Others</h2>
+							<div class="card-item clearfix">
+								<img src="app/img/element/folder.png" alt="" width="43" height="36">
+								<p>120 liens</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--Page result-->
+		<div id="results" class="container">
+		
+			<ul id="result-link" class="col-lg-8">
+				<li class="result-card">
+					<div class="result-icon">
+						<a href="" title="Site url">
+							<img src="" alt="Site favicon">
+						</a>
+					</div>
+					<div class="result-detail">
+						<h2>Site name</h2>
+						<p>Site description</p>
+					</div>
+					<a href="" title="View site">View</a>
+				</li>
+			</ul>
+
+			<ul id="cat-column" class="col-lg-4">
+				<li><a href="" title="">Photography</a></li>
+				<li><a href="" title="">3D</a></li>
+				<li><a href="" title="">Suite Adobe</a></li>
+				<li><a href="" title="">Fonts</a></li>
+				<li><a href="" title="">Html CSS</a></li>
+				<li><a href="" title="">General</a></li>
+				<li><a href="" title="">Motion Design</a></li>
+				<li><a href="" title="">Javascript</a></li>
+				<li><a href="" title="">Portfolio</a></li>
+				<li><a href="" title="">Inspiration</a></li>
+				<li><a href="" title="">Deviant Art</a></li>
+				<li><a href="" title="">Artstation</a></li>
+				<li><a href="" title="">Icons</a></li>
+				<li><a href="" title="">Color schemes</a></li>
+				<li><a href="" title="">Tutorials</a></li>
+				<li><a href="" title="">Others</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+</body>
+</html>
