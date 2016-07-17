@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<title>Fav app</title>
@@ -47,192 +47,182 @@
 				</fieldset>
 				<fieldset class="form-group col-lg-10 col-lg-offset-1">
 					<label for="category">Category</label>
-					<input id="category" class="form-control" name="fav-cat" type="text">
+					<select id="category" class="form-control" name="fav-cat">
+						<option>photography</option>
+						<option>3d</option>
+						<option>suite-adobe</option>
+						<option>fonts</option>
+						<option>html-css</option>
+						<option>general</option>
+						<option>motion-design</option>
+						<option>javascript</option>
+						<option>portfolio</option>
+						<option>inspiration</option>
+						<option>deviant-art</option>
+						<option>artstation</option>
+						<option>icons</option>
+						<option>color-schemes</option>
+						<option>tutorials</option>
+						<option>others</option>
+					</select>
 				</fieldset>
 				<fieldset class="form-group col-lg-10 col-lg-offset-1">
 					<label for="keywords">Keywords</label>
 					<input id="keywords" class="form-control" name="fav-keyword" type="text">
 				</fieldset>
-				<input class="col-lg-3" type="submit" value="Send">
+				<div class="col-lg-10">
+					<input class="col-lg-4" type="submit" value="Send">
+					<p class="error-field col-lg-12"></p>
+				</div>
 			</form>
 		</div>
 	</header>
 
 	<div id="main">
+
+		<!--Page category menu-->
 		<div id="card-menu" class="container">
 			<ul class="row">
 				<li class="card">
-					<a href="" title="">
+					<a href="photography" title="Photography category">
 						<div>
 							<h2>Photography</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="3d" title="3D category">
 						<div>
 							<h2>3D</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="suite-adobe" title="Suite Adobe category">
 						<div>
 							<h2>Suite Adobe</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="fonts" title="Fonts category">
 						<div>
 							<h2>Fonts</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="html-css" title="Html/CSS category">
 						<div>
-							<h2>Html, Css</h2>
+							<h2>Html/CSS</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="general" title="General category">
 						<div>
 							<h2>General</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="motion-design" title="Motion Design category">
 						<div>
 							<h2>Motion Design</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="javascript" title="Javascript category">
 						<div>
 							<h2>Javascript</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="portfolio" title="Portfolio category">
 						<div>
 							<h2>Portfolio</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="inspiration" title="Inspiration category">
 						<div>
 							<h2>Inspiration</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="deviant-art" title="Deviant Art category">
 						<div>
 							<h2>Deviant Art</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="artstation" title="Artstation">
 						<div>
 							<h2>Artstation</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="icons" title="Icons category">
 						<div>
 							<h2>Icons</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="color-schemes" title="Color Schemes category">
 						<div>
 							<h2>Color schemes</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="tutorials" title="Tutorials category">
 						<div>
 							<h2>Tutorials</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
 				</li>
 				<li class="card">
-					<a href="" title="">
+					<a href="others" title="Others category">
 						<div>
 							<h2>Others</h2>
 							<div class="card-item clearfix">
-								<img src="app/img/element/folder.png" alt="" width="43" height="36">
-								<p>120 liens</p>
 							</div>
 						</div>
 					</a>
@@ -244,7 +234,7 @@
 		<div id="results" class="container">
 		
 			<ul id="result-link" class="col-lg-8">
-				<li class="result-card col-lg-12">
+				<!--<li class="result-card col-lg-12">
 					<div class="result-icon col-lg-2">
 						<a href="" title="Site url">
 							<img src="app/img/element/Folder.png" alt="Site favicon">
@@ -255,66 +245,79 @@
 						<p>Site description</p>
 					</div>
 					<a href="" title="View site" class="view-btn col-lg-2">View</a>
-				</li>
-				<li class="result-card col-lg-12">
-					<div class="result-icon col-lg-2">
-						<a href="" title="Site url">
-							<img src="" alt="Site favicon">
-						</a>
-					</div>
-					<div class="result-detail col-lg-7 col-lg-offset-1">
-						<h2>Site name</h2>
-						<p>Site description</p>
-					</div>
-					<a href="" title="View site" class="view-btn col-lg-2">View</a>
-				</li>
-				<li class="result-card col-lg-12">
-					<div class="result-icon col-lg-2">
-						<a href="" title="Site url">
-							<img src="" alt="Site favicon">
-						</a>
-					</div>
-					<div class="result-detail col-lg-7 col-lg-offset-1">
-						<h2>Site name</h2>
-						<p>Site description</p>
-					</div>
-					<a href="" title="View site" class="view-btn col-lg-2">View</a>
-				</li>
-				<li class="result-card col-lg-12">
-					<div class="result-icon col-lg-2">
-						<a href="" title="Site url">
-							<img src="" alt="Site favicon">
-						</a>
-					</div>
-					<div class="result-detail col-lg-7 col-lg-offset-1">
-						<h2>Site name</h2>
-						<p>Site description</p>
-					</div>
-					<a href="" title="View site" class="view-btn col-lg-2">View</a>
-				</li>
+				</li>-->
 			</ul>
 
 			<ul id="cat-column" class="col-lg-4">
-				<li class="clearfix"><div></div><a class="active" href="" title="">Photography</a></li>
-				<li class="clearfix"><div></div><a href="" title="">3D</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Suite Adobe</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Fonts</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Html CSS</a></li class="clearfix">
-				<li class="clearfix"><div></div><a href="" title="">General</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Motion Design</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Javascript</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Portfolio</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Inspiration</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Deviant Art</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Artstation</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Icons</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Color schemes</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Tutorials</a></li>
-				<li class="clearfix"><div></div><a href="" title="">Others</a></li>
+				<li class="clearfix">
+					<div></div>
+					<a class="active" href="photography" title="">Photography</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="3d" title="">3D</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="suite-adobe" title="">Suite Adobe</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="fonts" title="">Fonts</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="html-css" title="">Html CSS</a>
+				</li class="clearfix">
+				<li class="clearfix">
+					<div></div>
+					<a href="general" title="">General</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="motion-design" title="">Motion Design</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="javascript" title="">Javascript</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="portfolio" title="">Portfolio</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="inspiration" title="">Inspiration</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="deviant-art" title="">Deviant Art</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="artstation" title="">Artstation</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="icons" title="">Icons</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="color-schemes" title="">Color schemes</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="tutorials" title="">Tutorials</a>
+				</li>
+				<li class="clearfix">
+					<div></div>
+					<a href="others" title="">Others</a>
+				</li>
 			</ul>
 		</div>
 	</div>
 
+<script src="app/js/main.js"></script>
 
 </body>
 </html>

@@ -91,7 +91,7 @@ header h1{
 }
 
 #add-fav input[type=submit]{
-	margin: 1em 0 0 3em;
+	margin: 1em 0 0 2em;
 	border: 1px solid #408ad8;
 	border-radius: 4px;
 	background: #FFF;
@@ -104,6 +104,18 @@ header h1{
 	background: #408ad8;
 }
 
+#add-fav .error-field{
+	margin-top: 1em;
+	font-size: 0.75em;
+}
+
+.complete{
+	color: #2ecc71;
+}
+
+.error{
+	color: #e74c3c;
+}
 
 /*CARD*/
 .card{
@@ -218,6 +230,7 @@ header h1{
 
 #cat-column li a.active{
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .result-card{
@@ -233,14 +246,13 @@ header h1{
 	height: 96px;
 	border-radius: 50%;
 	border: 1px solid #eee;
+	background: #FFF;
 }
 
 .result-icon img{
-	width: 96px;
-	height: 96px;
-	margin: auto;
-	border-radius: 50%;
-	border: 1px solid #eee;
+	width: 32px;
+	height: 32px;
+	margin: 2.15em 1.25em;
 }
 
 .view-btn{
