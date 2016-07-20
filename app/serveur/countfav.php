@@ -3,7 +3,7 @@
 
 	$count = $_GET['value'];
 
-	$sql = "SELECT COUNT(DISTINCT cat) AS 'val'
+	$sql = "SELECT COUNT(cat) as num
 			FROM site WHERE cat=:key ";
 
 	$statement = $pdo->prepare($sql);
@@ -14,5 +14,11 @@
 
 	$values = $statement->fetchAll();
 
+	foreach ($values as $value) {
+?>
 
+	<p><?=$value['num']?></p>
+
+<?php
+	}
 ?>

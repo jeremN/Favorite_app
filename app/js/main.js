@@ -27,6 +27,8 @@ $(document).ready(function(){
 		return false;
 	});
 
+	//Show / Hide form
+
 
 	/*******************************
 	Request
@@ -67,6 +69,8 @@ $(document).ready(function(){
 
 		var key = $(this).attr('href');
 
+		$('#results #cat-column a').find('key').addClass('active');
+
 		$data = {
 
 			"category": key
@@ -74,6 +78,23 @@ $(document).ready(function(){
 
 		//Get fav list from category
 		getFav();
+	});
+
+	//Count fav by category
+	$('#card-menu .card a').hover(function(e){
+
+		e.preventDefault();
+
+		var key = $(this).attr('href');
+		console.log(key);
+
+		$data = {
+
+			"value": key
+		}
+
+		//Get fav count from category
+		countFav();
 	});
 	
 
@@ -129,6 +150,27 @@ $(document).ready(function(){
 			$('#card-menu').hide();
 			$('#results').show();
 			$('#result-link').html(response); 
+		})
+		.fail(function(error){
+
+			console.log(error);
+		});		
+	}
+
+	//Get fav from category
+	function countFav(){
+
+		$.ajax({
+			url		: "app/serveur/countfav.php",
+			type	: "GET",
+			data	: $data,
+			success	: function(data){
+				console.log(data);
+			}
+		})
+		.done(function(response){
+
+			$('.card-item p').html(response);
 		})
 		.fail(function(error){
 

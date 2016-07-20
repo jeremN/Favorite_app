@@ -64,7 +64,9 @@ header{
 	border-color: #408ad8;
 	color: #408ad8;
 	background: #FFF;
+	height: 2.45em;
 	transition: all 0.25s ease-in;
+	-webkit-transition: all 0.25s ease-in;
 }
 
 #search .btn:hover{
@@ -96,8 +98,9 @@ header h1{
 	border-radius: 4px;
 	background: #FFF;
 	color: #408ad8;
-	transition: all 0.5s ease-in-out;
 	height: 2.5em;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 }
 #add-fav input[type=submit]:hover{
 	color: #FFF;
@@ -119,6 +122,7 @@ header h1{
 
 /*CARD*/
 .card{
+	overflow: hidden;
 	width: 15.625em;
 	height: 21.875em;
 	margin: 2.5em;
@@ -145,19 +149,18 @@ header h1{
 }
 
 .card a{
+	position: relative;
 	line-height: 1em;
 	text-decoration: none;
 	height: 18.75em;
+	padding: 0 0 20.5em 15.5em;
 }
 
 .card:hover{
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
-	-webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
-
-.card a div{
-	position: relative;
-	top: 0;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
 
 .card h2{
 	color: #FFF;
@@ -170,12 +173,18 @@ header h1{
 	border-radius: 2em;
 	padding: 0.5em 1em;
 	width: 8em;
-	margin-top: 14em;
-	margin-left: 6em;
+	position: absolute;
+	top: 22em;
+	left: 6em;
+	transition: all 0.25s ease-in-out; 
+	-webkit-transition: all 0.25s ease-in-out; 
+}
+
+.card a:hover .card-item{
+	top: 15em;
 }
 
 .card:nth-child(7) .card-item, .card:nth-child(14) .card-item{
-	margin-top: 11.5em;
 }
 
 .card-item img{
