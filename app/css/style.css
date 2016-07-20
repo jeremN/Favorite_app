@@ -169,22 +169,19 @@ header h1{
 }
 
 .card-item{
-	border: 1px solid #FFF;
-	border-radius: 2em;
 	padding: 0.5em 1em;
-	width: 8em;
+	width: 15.62em;
+	height: 5em;
 	position: absolute;
 	top: 22em;
-	left: 6em;
+	left: 0;
+	background: #FFF;
 	transition: all 0.25s ease-in-out; 
-	-webkit-transition: all 0.25s ease-in-out; 
+	-webkit-transition: all 0.35s ease-in-out; 
 }
 
 .card a:hover .card-item{
-	top: 15em;
-}
-
-.card:nth-child(7) .card-item, .card:nth-child(14) .card-item{
+	top: 16.5em;
 }
 
 .card-item img{
@@ -197,7 +194,7 @@ header h1{
 	float: right;
 	line-height: 1.5em;
 	margin: 0;
-	color: #FFF;
+	color: #408AD8;
 }
 
 /*RESULT PAGE*/

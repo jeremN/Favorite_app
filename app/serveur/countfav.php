@@ -17,7 +17,7 @@
 	foreach ($values as $value) {
 ?>
 
-	<p><?=$value['num']?></p>
+	<p><?=$value['num']?> liens</p>
 
 <?php
 	}
