@@ -6,9 +6,13 @@ $(document).ready(function(){
 		url 		= "",
 		key 		= "",
 		cat 		= "",
+		result 		= "",
 		$data 		= {};
 
 	$('#results').hide();
+	$('#add-fav').hide();
+	$('#add').removeClass('on');
+
 
 
 	/*******************************
@@ -28,6 +32,22 @@ $(document).ready(function(){
 	});
 
 	//Show / Hide form
+	$('#add').on('click', function(e){
+
+		e.preventDefault();
+
+
+		if( $('#add').hasClass('on') ){
+
+			$('#add-fav').slideUp();
+			$('#add').removeClass('on');
+		}
+		else{
+
+			$('#add-fav').slideDown();
+			$('#add').addClass('on');	
+		}
+	});
 
 
 	/*******************************
@@ -51,9 +71,10 @@ $(document).ready(function(){
 		}
 		else{
 
+			getMetaDescription(url)
 
 			fav_ico = url + "/favicon.ico";
-			desc= getMetaDescription(url);
+			desc = result;
 
 			checkIfExist();
 		}
@@ -80,13 +101,29 @@ $(document).ready(function(){
 		getFav();
 	});
 
+	//Search fav by keywords
+	$('#search').on('submit', function(e){
+
+		e.preventDefault();
+
+		var key = $('#search #research').val();
+
+		$data = {
+
+			"word": key
+		}
+
+		//Get fav list from category
+		searchFav();
+	});
+
 	//Count fav by category
 	$('#card-menu .card a').hover(function(e){
 
 		e.preventDefault();
 
 		var key = $(this).attr('href');
-		console.log(key);
+		//console.log(key);
 
 		$data = {
 
@@ -119,17 +156,12 @@ $(document).ready(function(){
 				url		: "app/serveur/postfav.php",
 				type	: "POST",
 				data	: $data,
-				success	: function(data){
-
-					console.log(data);
-				}
-
 			})
 			.done(function(response){
 
 				errorRemover();
 				$('.error-field').html("Site enregistré !").addClass('complete');
-				console.log(response);
+				//console.log(response);
 			})
 			.fail(function(error){
 
@@ -164,9 +196,6 @@ $(document).ready(function(){
 			url		: "app/serveur/countfav.php",
 			type	: "GET",
 			data	: $data,
-			success	: function(data){
-				console.log(data);
-			}
 		})
 		.done(function(response){
 
@@ -194,7 +223,7 @@ $(document).ready(function(){
 				if(response == 'true'){
 
 					$('.error-field').append("Le site est déjà enregistré").addClass('error'); 
-					console.log(response);
+					//console.log(response);
 				}
 				else{
 
@@ -208,19 +237,59 @@ $(document).ready(function(){
 		});		
 	}
 
+	//Search fav with keyword
+	function searchFav(){
+
+		$.ajax({
+			url		: "app/serveur/searchfav.php",
+			type	: "GET",
+			data	: $data,
+		})
+		.done(function(response){
+
+			$('#card-menu').hide();
+			$('#cat-column').hide();
+			$('#results').show();
+			$('#result-link').html(response); 
+		})
+		.fail(function(error){
+
+			console.log(error);
+		});		
+	}
+
+
 	//Remove error-field class
 	function errorRemover(){
-		$('.error-field').removeClass('complete, error');
+		$('.error-field').append('').removeClass('complete, error');
+
 	}
 
 	//Get description from site
 	function getMetaDescription(adress){
 
-		$.get('http://'+ adress, 
-			function(data){
-				$(data).find('meta[name=description]').attr("content");
-				return data;
-			});
+		var site = 'http://'+ adress;
+
+		$data = {
+
+			"metaUrl" : site,
+		}
+
+		$.ajax({
+
+			url 		: "app/serveur/getmeta.php",
+			type 		: "GET",
+			data 		: $data,
+			success 	: function(response){
+				return response;
+				result = response;
+				console.log(response);
+			}
+		})
+		.fail(function(error){
+
+			console.log(error);
+		});
 	}
 
 });
