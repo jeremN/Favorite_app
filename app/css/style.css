@@ -31,61 +31,61 @@ header{
 #add{
 	line-height: 3.5em;
 	height: 5.9em;
-	background: #FFF;
+	backgroun d: #FFF;
 	border: none;
 	color: #408ad8;
 	transition: all 0.2s ease-in;
 }
 
-#add .glyphicon-plus{
-	transition: all 0.25s ease-in;
-}
+	#add .glyphicon-plus{
+		transition: all 0.25s ease-in;
+	}
 
-#add.on .glyphicon-plus{
-	transform: rotate(-45deg);
-}
+	#add.on .glyphicon-plus{
+		transform: rotate(-45deg);
+	}
 
-#add.on{
-	color: #FFF;
-	background: #408ad8;
-}
+	#add.on{
+		color: #FFF;
+		background: #408ad8;
+	}
 
-#add:hover{
-	background: rgba(#4e4e4e, 0.25);
-}
-
-#search input[type=submit]{
-	margin-top: 1.7em;
-}
+	#add:hover{
+		background: rgba(#4e4e4e, 0.25);
+	}
 
 #search .form-group{
 	margin-top: 1.7em;
 	padding-right: 0;
 }
 
-#search input:not([type=submit]){
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
-}
+	#search input[type=submit]{
+		margin-top: 1.7em;
+	}
 
-#search input[type=submit]{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
+	#search input:not([type=submit]){
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
 
-#search .btn{
-	border-color: #408ad8;
-	color: #408ad8;
-	background: #FFF;
-	height: 2.45em;
-	transition: all 0.25s ease-in;
-	-webkit-transition: all 0.25s ease-in;
-}
+	#search input[type=submit]{
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 
-#search .btn:hover{
-	color: #FFF;
-	background: #408ad8;
-}
+	#search .btn{
+		border-color: #408ad8;
+		color: #408ad8;
+		background: #FFF;
+		height: 2.45em;
+		transition: all 0.25s ease-in;
+		-webkit-transition: all 0.25s ease-in;
+	}
+
+	#search .btn:hover{
+		color: #FFF;
+		background: #408ad8;
+	}
 
 header h1{
 	line-height: 1.9em;
@@ -105,25 +105,26 @@ header h1{
 	color: #408ad8;
 }
 
-#add-fav input[type=submit]{
-	margin: 1em 0 0 2em;
-	border: 1px solid #408ad8;
-	border-radius: 4px;
-	background: #FFF;
-	color: #408ad8;
-	height: 2.5em;
-	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out;
-}
-#add-fav input[type=submit]:hover{
-	color: #FFF;
-	background: #408ad8;
-}
+	#add-fav input[type=submit]{
+		margin: 1em 0 0 2em;
+		border: 1px solid #408ad8;
+		border-radius: 4px;
+		background: #FFF;
+		color: #408ad8;
+		height: 2.5em;
+		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+	}
 
-#add-fav .error-field{
-	margin-top: 1em;
-	font-size: 0.75em;
-}
+	#add-fav input[type=submit]:hover{
+		color: #FFF;
+		background: #408ad8;
+	}
+
+	#add-fav .error-field{
+		margin-top: 1em;
+		font-size: 0.75em;
+	}
 
 .complete{
 	color: #2ecc71;
@@ -148,38 +149,38 @@ header h1{
   	-webkit-transition: box-shadow 1s cubic-bezier(.25,.8,.25,1);
 }
 
-.card:nth-child(1n){
-	background: linear-gradient(-45deg, #46c8a7, #3f75c6);
-}
-.card:nth-child(2n){
-	background: linear-gradient(-45deg, #3f75c6, #9e77b6);
-}
-.card:nth-child(3n){
-	background: linear-gradient(-45deg, #ffb78c, #e66790);
-}
-.card:nth-child(4n){
-	background: linear-gradient(-45deg, #7fd3f7, #433e86);
-}
+	.card:nth-child(1n){
+		background: linear-gradient(-45deg, #46c8a7, #3f75c6);
+	}
+	.card:nth-child(2n){
+		background: linear-gradient(-45deg, #3f75c6, #9e77b6);
+	}
+	.card:nth-child(3n){
+		background: linear-gradient(-45deg, #ffb78c, #e66790);
+	}
+	.card:nth-child(4n){
+		background: linear-gradient(-45deg, #7fd3f7, #433e86);
+	}
 
-.card a{
-	position: relative;
-	line-height: 1em;
-	text-decoration: none;
-	height: 18.75em;
-	padding: 0 0 20.5em 15.5em;
-}
+	.card a{
+		position: relative;
+		line-height: 1em;
+		text-decoration: none;
+		height: 18.75em;
+		padding: 0 0 20.5em 15.5em;
+	}
 
-.card:hover{
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
+	.card:hover{
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+		-webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
 
 
-.card h2{
-	color: #FFF;
-	margin-left: 0.5em;
-	letter-spacing: 0.5px;
-}
+	.card h2{
+		color: #FFF;
+		margin-left: 0.5em;
+		letter-spacing: 0.5px;
+	}
 
 .card-item{
 	padding: 0.5em 1em;
@@ -193,22 +194,22 @@ header h1{
 	-webkit-transition: all 0.35s ease-in-out; 
 }
 
-.card a:hover .card-item{
-	top: 16.5em;
-}
+	.card a:hover .card-item{
+		top: 16.5em;
+	}
 
-.card-item img{
-	width: 20px;
-	height: 17px;
-	float: left;
-}
+	.card-item img{
+		width: 20px;
+		height: 17px;
+		float: left;
+	}
 
-.card-item p{
-	float: right;
-	line-height: 1.5em;
-	margin: 0;
-	color: #408AD8;
-}
+	.card-item p{
+		float: right;
+		line-height: 1.5em;
+		margin: 0;
+		color: #408AD8;
+	}
 
 /*RESULT PAGE*/
 #cat-column{
@@ -216,49 +217,50 @@ header h1{
 	margin: 1em 0;
 }
 
-#cat-column li{
-	margin: 2em 0;
-}
+	#cat-column li{
+		margin: 2em 0;
+	}
 
-#cat-column li div{
-	float: left;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: #000;
-	margin: 0 1em;
-}
+	#cat-column li div{
+		float: left;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #000;
+		margin: 0 1em;
+	}
 
-#cat-column li a{
-	float: left;
-	color: #4f4f4f;
-}
+	#cat-column li a{
+		float: left;
+		color: #4f4f4f;
+	}
 
-#cat-column li:nth-child(1n) div{
-	background: #46c8a7;
-}
-#cat-column li:nth-child(2n) div{
-	background: #3f75c6;
-}
-#cat-column li:nth-child(3n) div{
-	background: #ffb78c;
-}
-#cat-column li:nth-child(4n) div{
-	background: #7fd3f7;
-}
+	#cat-column li:nth-child(1n) div{
+		background: #46c8a7;
+	}
+	#cat-column li:nth-child(2n) div{
+		background: #3f75c6;
+	}
+	#cat-column li:nth-child(3n) div{
+		background: #ffb78c;
+	}
+	#cat-column li:nth-child(4n) div{
+		background: #7fd3f7;
+	}
 
-#cat-column li a.active{
-	font-weight: bold;
-	text-decoration: none;
+	#cat-column li a.active{
+		font-weight: bold;
+		text-decoration: none;
 }
 
 .result-card{
 	margin: 1em 0;
 }
 
-.result-card h2{
-	margin-top: 0;
-}
+	.result-card h2{
+		font-size: 1em;
+		line-height: 4em;
+	}
 
 .result-icon{
 	width: 96px;
@@ -267,15 +269,15 @@ header h1{
 	border: 1px solid #eee;
 }
 
-.result-icon img{
-	width: auto;
-	min-width: 16px;
-	max-width: 32px;
-	height: auto;
-	min-height: 16px;
-	max-height: 32px;
-	margin: 2.15em auto;
-}
+	.result-icon img{
+		width: auto;
+		min-width: 16px;
+		max-width: 32px;
+		height: auto;
+		min-height: 16px;
+		max-height: 32px;
+		margin: 2.15em auto;
+	}
 
 .view-btn{
 	height: 44px;

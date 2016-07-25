@@ -36,17 +36,8 @@ $(document).ready(function(){
 
 		e.preventDefault();
 
+		toggleForm();
 
-		if( $('#add').hasClass('on') ){
-
-			$('#add-fav').slideUp();
-			$('#add').removeClass('on');
-		}
-		else{
-
-			$('#add-fav').slideDown();
-			$('#add').addClass('on');	
-		}
 	});
 
 
@@ -100,7 +91,7 @@ $(document).ready(function(){
 		//Get fav list from category
 		getFav();
 	});
-
+ 
 	//Search fav by keywords
 	$('#search').on('submit', function(e){
 
@@ -138,6 +129,21 @@ $(document).ready(function(){
 	/*******************************
 	Functions
 	********************************/
+
+	function toggleForm(){
+
+		if( $('#add').hasClass('on') ){
+
+			$('#add-fav').slideUp();
+			$('#add').removeClass('on');
+		}
+		else{
+
+			$('#add-fav').slideDown();
+			$('#add').addClass('on');	
+		}
+	}
+
 
 	//Post new fav
 	function postFav(){
@@ -291,5 +297,23 @@ $(document).ready(function(){
 			console.log(error);
 		});
 	}
+
+
+	/*******************************
+	Add into bdd
+	********************************/
+	var storeAS = [];
+
+	function artstationFullFill(){
+
+		$.get("../../artstation.js", function(data){
+			storeAS = data.push();
+			console.log(storeAS);
+		});
+
+
+	}
+
+	artstationFullFill();
 
 });

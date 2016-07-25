@@ -25,7 +25,6 @@
 		</div>
 		<div class="result-detail col-lg-7 col-lg-offset-1">
 			<h2><?=$site['adress']?></h2>
-			<p><?=$site['description']?></p>
 		</div>
 		<a href="http://<?=$site['adress']?>" title="View site" class="view-btn col-lg-2" target="_blank">View</a>
 	</li>
