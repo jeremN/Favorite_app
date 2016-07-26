@@ -50,6 +50,7 @@ $(document).ready(function(){
 
 		e.preventDefault();
 		errorRemover();
+		addContent();
 
 		//Input values
 		url = $("#add-fav input[name=fav-url]").val(),
@@ -302,18 +303,30 @@ $(document).ready(function(){
 	/*******************************
 	Add into bdd
 	********************************/
-	var storeAS = [];
-
-	function artstationFullFill(){
-
-		$.get("../../artstation.js", function(data){
-			storeAS = data.push();
-			console.log(storeAS);
-		});
+	var storeAS = [
+		
+	];
 
 
-	}
+		function addContent(){
 
-	artstationFullFill();
+			/*$.getScript("app/js/deviant.js", function(data){
+				storeAS.push(data);
+			});*/
+
+			for( i = 0; i < storeAS.length; i++){
+
+			 	url 	= storeAS[i],
+				key 	= "deviantart, art, artiste, 3d, 2d, photography",
+				cat 	= "deviant-art",
+				fav_ico = "http://www.deviantart.com/favicon.ico",
+				desc	= "deviant-art";
+
+				postFav();
+			}
+			
+		}
+
+	console.log(storeAS[12]);
 
 });
