@@ -4,7 +4,7 @@
 	$category = $_GET['category'];
 
 
-	$sql = "SELECT adress, favicon, description  
+	$sql = "SELECT adress, favicon, description 
 			FROM site WHERE cat LIKE :key";
 
 	$statement = $pdo->prepare($sql);

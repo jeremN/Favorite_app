@@ -294,3 +294,66 @@ header h1{
 	background: #4f4f4f;
 	color: #FFF;
 }
+
+#paginate{
+	border: 1px solid #4f4f4f;
+	margin-top: 2em;
+	margin-bottom: 4em; 
+	height: 3.5em;
+	display: inline-block;
+	overflow-y: hidden;
+}
+	#paginate nav{
+		width: 80%;
+		height: 3.5em;
+		overflow: hidden;
+		overflow-x: scroll;
+		display: inline-block;
+	}
+
+	#paginate ul{
+		width: 2000em;
+	}
+
+	#paginate li, 
+	.next-page, 
+	.prev-page{
+		display: inline-block;
+		cursor: pointer;
+		float: left;
+		padding: 0.95em 0.85em;
+	}
+
+	.next-page, 
+	.prev-page{
+		width: 45px;
+		height: 45px;
+	}
+
+	.next-page{
+		float: right;
+	}
+
+	#paginate li.selected{
+		color: #408ad8;
+	}
+
+	.total-pages{
+		float: left;
+		margin: 1em;
+	}
+
+#back-top{
+	border: 2px solid #4f4f4f;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	left: 2.5%;
+	bottom: 2.5%;
+}
+
+	#back-top a{
+		line-height: 2.35em;
+		padding: 0.75em 0.9em;
+		color: #4f4f4f;
+	}

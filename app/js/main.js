@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 	$('#results').hide();
 	$('#add-fav').hide();
+	$('#back-top').hide();
 	$('#add').removeClass('on');
 
 
@@ -39,6 +40,17 @@ $(document).ready(function(){
 		toggleForm();
 
 	});
+
+	//Scroll to top button
+	$(window).scroll(function(e){
+
+		if ($(this).scrollTop() > 10) {
+			$('#back-top').fadeIn();
+		} else {
+			$('#back-top').fadeOut();
+		}
+	});
+
 
 
 	/*******************************
@@ -105,7 +117,7 @@ $(document).ready(function(){
 			"word": key
 		}
 
-		//Get fav list from category
+		//Get fav list from keywords
 		searchFav();
 	});
 
@@ -115,7 +127,6 @@ $(document).ready(function(){
 		e.preventDefault();
 
 		var key = $(this).attr('href');
-		//console.log(key);
 
 		$data = {
 
@@ -189,6 +200,7 @@ $(document).ready(function(){
 			$('#card-menu').hide();
 			$('#results').show();
 			$('#result-link').html(response); 
+			pagination(20, '.result-card');
 		})
 		.fail(function(error){
 
@@ -273,7 +285,7 @@ $(document).ready(function(){
 	}
 
 	//Get description from site
-	function getMetaDescription(adress){
+	/*function getMetaDescription(adress){
 
 		var site = 'http://'+ adress;
 
@@ -298,7 +310,7 @@ $(document).ready(function(){
 			console.log(error);
 		});
 	}
-
+	*/
 
 	/*******************************
 	Add into bdd
@@ -307,26 +319,154 @@ $(document).ready(function(){
 		
 	];
 
+	function addContent(){
 
-		function addContent(){
+		/*$.getScript("app/js/deviant.js", function(data){
+			storeAS.push(data);
+		});*/
 
-			/*$.getScript("app/js/deviant.js", function(data){
-				storeAS.push(data);
-			});*/
+		for( i = 0; i < storeAS.length; i++){
 
-			for( i = 0; i < storeAS.length; i++){
+		 	url 	= storeAS[i],
+			key 	= "deviantart, art, artiste, 3d, 2d, photography",
+			cat 	= "deviant-art",
+			fav_ico = "http://www.deviantart.com/favicon.ico",
+			desc	= "deviant-art";
 
-			 	url 	= storeAS[i],
-				key 	= "deviantart, art, artiste, 3d, 2d, photography",
-				cat 	= "deviant-art",
-				fav_ico = "http://www.deviantart.com/favicon.ico",
-				desc	= "deviant-art";
+			postFav();
+		}
+		
+	}
 
-				postFav();
+	//console.log(storeAS[12]);
+
+	/*******************************
+	Pagination
+	********************************/
+
+	function pagination(nPerPage, divSelect){
+
+		//Init
+		var nElement = $(divSelect).length,
+			nPage 	 = Math.ceil(nElement / nPerPage), 
+			pageLoad = 1;
+		
+		$(divSelect).each(function(index){
+
+			if(index < nPerPage){
+
+				$(divSelect).eq(index).show();
 			}
-			
+			else{
+
+				$(divSelect).eq(index).hide();
+			}
+		});
+
+		//$('#paginate .next-page').show();
+
+		//Reset
+		function reset(){
+
+			if(nPage < 2){
+
+				$('#paginate').hide();
+			}
+			else if(pageLoad === nPage){
+
+				$('#paginate .next-page .fa').hide();
+			}
+			else{
+
+				$('#paginate .next-page .fa').show();
+			}
+
+			if(pageLoad === 1){
+
+				$('#paginate .prev-page .fa').hide();
+			}
+			else{
+
+				$('#paginate .prev-page .fa').show();
+			}
+
+			$('#paginate ul li').removeClass('selected');
+			$('#paginate ul li').eq(pageLoad - 1).addClass('selected');
 		}
 
-	console.log(storeAS[12]);
+		//Generate pagination
+		for(i = 1; i <= nPage; i++){
+
+			$('#paginate .numbers').append('<li>' + i + '</li>');
+		}
+
+		//Change on click
+		$('#paginate ul li').click(function(){
+
+			if($(this).index() + 1 != pageLoad){
+
+				pageLoad = $(this).index() + 1;
+				$(divSelect).hide();
+
+				$(divSelect).each(function(i){
+
+					if(i >= ( (pageLoad * nPerPage) - nPerPage) && i < (pageLoad * nPerPage) ){
+
+						$(this).show();
+					}
+				});
+
+				reset();
+			}
+		});
+
+		//On click
+		//Next
+		$('#paginate .next-page').click(function(){
+
+			if(pageLoad < nPage){
+
+				pageLoad += 1;
+				console.log(pageLoad);
+				$(divSelect).hide();
+				//calcPages(0);
+
+				$(divSelect).each(function(i){
+
+					if( i >= ( (pageLoad * nPerPage) -  nPerPage) && i < (pageLoad * nPerPage) ){
+
+						$(this).show();
+
+					}
+				});
+				reset();
+			}
+		});
+
+		//Previous
+		$('#paginate .prev-page').click(function(){
+
+			if(pageLoad - 1 >= 1){
+
+				pageLoad -= 1;
+				console.log(pageLoad);
+				$(divSelect).hide();
+				//calcPages(1);
+
+				$(divSelect).each(function(i){
+
+					if( i >= ( (pageLoad * nPerPage) -  nPerPage) && i < (pageLoad * nPerPage) ){
+
+						$(this).show();
+
+					}
+				});
+
+				reset();
+			}
+		});
+
+		reset();
+	}
 
 });
