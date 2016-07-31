@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	var fav_ico 	= "",
 		desc  		= "", 
 		url 		= "",
@@ -13,7 +12,6 @@ $(document).ready(function(){
 	$('#add-fav').hide();
 	$('#back-top').hide();
 	$('#add').removeClass('on');
-
 
 
 	/*******************************
@@ -44,13 +42,12 @@ $(document).ready(function(){
 	//Scroll to top button
 	$(window).scroll(function(e){
 
-		if ($(this).scrollTop() > 10) {
+		if ($(this).scrollTop() > 1) {
 			$('#back-top').fadeIn();
 		} else {
 			$('#back-top').fadeOut();
 		}
 	});
-
 
 
 	/*******************************
@@ -62,7 +59,7 @@ $(document).ready(function(){
 
 		e.preventDefault();
 		errorRemover();
-		addContent();
+		//addContent();
 
 		//Input values
 		url = $("#add-fav input[name=fav-url]").val(),
@@ -94,7 +91,7 @@ $(document).ready(function(){
 
 		var key = $(this).attr('href');
 
-		$('#results #cat-column a').find('key').addClass('active');
+		$('#results #cat-column').find('a[href=key]').addClass('active');
 
 		$data = {
 
@@ -142,6 +139,7 @@ $(document).ready(function(){
 	Functions
 	********************************/
 
+	//Show-Hide form
 	function toggleForm(){
 
 		if( $('#add').hasClass('on') ){
@@ -155,7 +153,6 @@ $(document).ready(function(){
 			$('#add').addClass('on');	
 		}
 	}
-
 
 	//Post new fav
 	function postFav(){
@@ -200,6 +197,7 @@ $(document).ready(function(){
 			$('#card-menu').hide();
 			$('#results').show();
 			$('#result-link').html(response); 
+			$('#paginate').show();
 			pagination(20, '.result-card');
 		})
 		.fail(function(error){
@@ -270,13 +268,14 @@ $(document).ready(function(){
 			$('#cat-column').hide();
 			$('#results').show();
 			$('#result-link').html(response); 
+			$('#paginate').show();
+			pagination(20, '.result-card');
 		})
 		.fail(function(error){
 
 			console.log(error);
 		});		
 	}
-
 
 	//Remove error-field class
 	function errorRemover(){
@@ -315,9 +314,7 @@ $(document).ready(function(){
 	/*******************************
 	Add into bdd
 	********************************/
-	var storeAS = [
-		
-	];
+	var storeAS = [];
 
 	function addContent(){
 
@@ -335,21 +332,20 @@ $(document).ready(function(){
 
 			postFav();
 		}
-		
 	}
 
-	//console.log(storeAS[12]);
 
 	/*******************************
 	Pagination
 	********************************/
-
 	function pagination(nPerPage, divSelect){
 
 		//Init
 		var nElement = $(divSelect).length,
 			nPage 	 = Math.ceil(nElement / nPerPage), 
 			pageLoad = 1;
+
+		$('#paginate ul').empty();
 		
 		$(divSelect).each(function(index){
 
@@ -362,8 +358,6 @@ $(document).ready(function(){
 				$(divSelect).eq(index).hide();
 			}
 		});
-
-		//$('#paginate .next-page').show();
 
 		//Reset
 		function reset(){

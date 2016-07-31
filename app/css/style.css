@@ -22,19 +22,37 @@ a:hover{
 }
 
 /*HEADER*/
-header{
-	background: #FFF;
-	border-bottom: 1px solid #bdc3c7;
+#top-page{
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: #3a3e5d;
+	border-bottom: 1px solid #ececef;
 	height: 6em;
+}
+#main, 
+#results{
+	position: relative;
+	top: 5em;
+}
+#results{
+	top: 1em;
 }
 
 #add{
 	line-height: 3.5em;
-	height: 5.9em;
-	backgroun d: #FFF;
+	position: relative;
+	top: 4em;
+	width: 4em;
+	height: 4em;
+	background: #f95291;
 	border: none;
-	color: #408ad8;
+	border-radius: 50%;
+	color: #FFF;
+	z-index: 3;
 	transition: all 0.2s ease-in;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 	#add .glyphicon-plus{
@@ -51,7 +69,7 @@ header{
 	}
 
 	#add:hover{
-		background: rgba(#4e4e4e, 0.25);
+		background: #408ad8;
 	}
 
 #search .form-group{
@@ -74,8 +92,8 @@ header{
 	}
 
 	#search .btn{
-		border-color: #408ad8;
-		color: #408ad8;
+		border-color: #FFF;
+		color: #3a3e5d;
 		background: #FFF;
 		height: 2.45em;
 		transition: all 0.25s ease-in;
@@ -92,25 +110,26 @@ header h1{
 	margin-top: 0.1em;
 	font-weight: 800;
 	letter-spacing: 0.5px;
-	color: #408ad8;
+	color: #FFF;
 }
 
 #add-fav{
 	position: absolute;
 	background: #FFF;
 	top: 6em;
-	right: 0;
-	z-index: 9;
-	padding: 1em 0 2em;
-	color: #408ad8;
+	right: 22em;
+	z-index: 2;
+	padding: 2.5em 0 2em;
+	color: #3a3e5d;
+	box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 	#add-fav input[type=submit]{
 		margin: 1em 0 0 2em;
-		border: 1px solid #408ad8;
+		border: 1px solid #3a3e5d;
 		border-radius: 4px;
 		background: #FFF;
-		color: #408ad8;
+		color: #3a3e5d;
 		height: 2.5em;
 		transition: all 0.5s ease-in-out;
 		-webkit-transition: all 0.5s ease-in-out;
@@ -118,7 +137,7 @@ header h1{
 
 	#add-fav input[type=submit]:hover{
 		color: #FFF;
-		background: #408ad8;
+		background: #3a3e5d;
 	}
 
 	#add-fav .error-field{
@@ -213,8 +232,11 @@ header h1{
 
 /*RESULT PAGE*/
 #cat-column{
+	position: fixed;
 	border-left: 1px solid #bdc3c7;
 	margin: 1em 0;
+	right: 0;
+	top: 5.5em;
 }
 
 	#cat-column li{
@@ -255,6 +277,7 @@ header h1{
 
 .result-card{
 	margin: 1em 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 	.result-card h2{
