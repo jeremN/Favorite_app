@@ -1,8 +1,8 @@
 <?php
 
-    define("DBHOST", "jeremnehbhjeremn.mysql.db");  //ip du serveur MySQL
-    define("DBUSER", "jeremnehbhjeremn"); 		//username MySQL
-    define("DBPASS", "16Favapp1508");			//mot de passe MySQL
+    define("DBHOST", "localhost);  //ip du serveur MySQL
+    define("DBUSER", "root"); 		//username MySQL
+    define("DBPASS", "");			//mot de passe MySQL
     define("DBNAME", "fav_app");    //nom de la bdd
 
 	try {
