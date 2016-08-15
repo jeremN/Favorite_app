@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 		e.preventDefault();
 		errorRemover();
-		addContent();
+		//addContent();
 
 		//Input values
 		url = $("#add-fav input[name=fav-url]").val(),
@@ -314,45 +314,7 @@ $(document).ready(function(){
 	/*******************************
 	Add into bdd
 	********************************/
-	var storeAS = [
-
-"www.xnormal.net",
-"www.crazybump.com",
-"www.vray-materials.de",
-"www.dashdotslash.net",
-"www.mudboxhub.com",
-"www.digitaldreamdesigns.com",
-"www.eat3d.com",
-"www.referencereference.com",
-"www.cgeverything.co.uk",
-"www.my3dtextures.com/index.html",
-"www.cmivfx.com",
-"www.tdt3d.com",
-"www.3dsaloon.fr",
-"www.lemog.fr",
-"www.mrmaterials.com",
-"www.archibaseplanet.com",
-"www.modelplusmodel.com",
-"www.news.polysculpt.com",
-"www.cgarena.com",
-"www.blogs.wefrag.com",
-"www.cgtoolkit.com",
-"www.uvlayout.com",
-"www.polygonal-design.fr",
-"www.3dlinks.com",
-"www.luismma.wordpress.com",
-"www.digilab.uni-hannover.de",
-"www.pixelcg.com",
-"www.polysculpt.com",
-"www.dryzen.com",
-"www.syflex.biz",
-"www.blastcode.com",
-"www.pixelux.com",
-"www.pitiwazou.com",
-"www.djx.com.au",
-"www.stonetrip.com",
-"www.manvsparticles.com"
-];
+	var storeAS = [];
 
 	function addContent(){
 
